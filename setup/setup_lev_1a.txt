@@ -17,14 +17,14 @@ institution : 'Institute for Geophysics and Meteorology Cologne (Germany)'
 # INPUT                                           #
 ###################################################
 # path base of input files
-path_base_in : /work/mech/mosaic-aca/mirac_radar
+path_base_in : /work/nrisse/acloud/mirac_radar
 
 # path base of position and attitude sensors
 # (the program expects subfolders with the sensor name(s) therein)
-path_base_ins : /data/obs/campaigns/mosaic-aca/ins
+path_base_ins : /data/obs/campaigns/acloud/ins
 
 # path base of dropsonde data
-path_base_dropsondes : /data/obs/campaigns/mosaic-aca/dropsondes
+path_base_dropsondes : /data/obs/campaigns/acloud/dropsondes
 
 # input level
 lev_in : 'lev_0'
@@ -39,7 +39,7 @@ attitude_sensor_name : 'ins1'
 # OUTPUT                                          #
 ###################################################
 # output path base (subfolders are created automatically if needed)
-path_base_out : /work/mech/mosaic-aca/mirac_radar
+path_base_out : /work/nrisse/acloud/mirac_radar
 
 # output level (may be chosen by the user)
 lev_out : 'lev_1a'
@@ -61,18 +61,18 @@ nc_string_length : 1024
 # docstring of the script).
 
 # start (inclusive)
-year_beg : 2020
-month_beg :   9
-day_beg :     2 
-hour_beg :    7
+year_beg : 2017
+month_beg :   6
+day_beg :     8
+hour_beg :    0
 minute_beg :  0
 second_beg :  0
 
 # end (exclusive)
-year_end : 2020
-month_end :   9
-day_end :     2
-hour_end :   10 
+year_end : 2017
+month_end :   6
+day_end :     9
+hour_end :    0
 minute_end :  0
 second_end :  0
 
@@ -117,8 +117,8 @@ position_sensor_z : 2.049      # (m) direction towards stabilizer
 # azimuth :       forward       twd right wing     backward     twd left wing
 # view angle :    downward      horizontal         upward       ---
 
-payload_sensor_azimuth_deg : 184.020715703 #177.06      # (see definition above)
-payload_sensor_view_angle_deg :  24.179424646#25.61    # (see definition above)
+payload_sensor_azimuth_deg : 177.063669354 #177.06      # (see definition above)
+payload_sensor_view_angle_deg :  25.6097820116#25.61    # (see definition above)
 
 ###################################################
 # TIME OFFSETS                                    #
@@ -126,8 +126,8 @@ payload_sensor_view_angle_deg :  24.179424646#25.61    # (see definition above)
 # real_time = record_time - time_offset
 # (positive offset: data are recorded too late)
 time_offset_payload_sensor : 0.              # (s)
-time_offset_position_sensor : -0.561823386216 # 0.302  # (s)
-time_offset_attitude_sensor : 3.35270394397 # 0.813  # (s)
+time_offset_position_sensor : 0.0527125398134 # 0.302  # (s)
+time_offset_attitude_sensor : 0.757093811325 # 0.813  # (s)
 
 ###################################################
 # EXTERNAL ANCILLARY DATA                         #

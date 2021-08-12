@@ -8,7 +8,7 @@ from aa_lib import netcdf as aa_netcdf
 from aa_lib import datetime_utils as aa_dt
 
 # default
-_path_ins = '/data/obs/campaigns/mosaic-aca/ins'
+_path_ins = '/data/obs/campaigns/acloud/ins'
 
 
 def get_data(name, date, path_ins=None, platform='P5'):
@@ -29,8 +29,6 @@ def get_data(name, date, path_ins=None, platform='P5'):
         -------
         2018-01-06 (AA): Created
     """
-    if name.startswith('bahamas'):
-        return get_data_bahamas(date, name)
 
     ###################################################
     # DEFAULT                                         #
@@ -66,36 +64,3 @@ def get_data(name, date, path_ins=None, platform='P5'):
     meta['time'] = {}
 
     return data, meta
-
-
-def get_data_bahamas(date, name):
-    """Return data in form of two dict."""
-    path = '/data/hamp/flights/narval2/uniformGrid'
-    filename = date.strftime(path + '/bahamas_%Y%m%d_v2.1.nc')
-
-    with Dataset(filename) as nc:
-        secs1970 = nc.variables['time'][:]
-        time = [aa_dt.seconds_to_datetime(s) for s in secs1970]
-
-        data = {
-            'time' : time, # list of datetime.datetime
-            'secs1970' : secs1970, # 1d-array of seconds since 1970
-            'lon' : nc.variables['lon'][:],
-            'lat' :  nc.variables['lat'][:],
-            'alt' :  nc.variables['altitude'][:],
-            'head' :  nc.variables['heading'][:],
-            'pitch' :  nc.variables['pitch'][:],
-            'roll' :  nc.variables['roll'][:],
-        }
-
-    if name == 'bahamas_pos':
-        data.pop('head')
-        data.pop('pitch')
-        data.pop('roll')
-
-    if name == 'bahamas_ins':
-        data.pop('lon')
-        data.pop('lat')
-        data.pop('alt')
-
-    return data, {}

@@ -138,7 +138,7 @@ if __name__ == '__main__':
     data, setup = main(setup_file=setup_file)
 
 
-    if _DEBUG
+    if _DEBUG:
 
         import matplotlib.pyplot as plt
 
