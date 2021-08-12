@@ -102,7 +102,7 @@ def main(setup_file=_setup_file, overwrite=True):
     # preparation
     print('read setup file %s' % setup_file)
     setup = tab.read_namelist(setup_file, convert_to_number=True)
-    process_setup(setup)
+    setup_utils.process_setup(setup, chop_lists=True)
 
     # list of filenames
     print('get filenames...')
@@ -217,22 +217,13 @@ def main(setup_file=_setup_file, overwrite=True):
     return data, setup
 
 
-def process_setup(setup):
-    """Process setup after loading to make it usable by main()."""
-    setup_utils.process_setup(setup, chop_lists=True)
-    return setup
-
-
-###################################################
-# I/O                                             #
-###################################################
 def get_payload_sensor_data(fni, setup):
-    print(fni)
     """Return as dict."""
-    # ========== read  =================================== #
+
+    print(fni)
+
     data = io.read.get_data(fni, setup)
 
-    # ========== rename  ================================= #
     move_table = [                      # replace (old, new)
         ('time', 'time_sensor'),
         ('secs1970', 'secs1970_sensor'),
@@ -242,9 +233,9 @@ def get_payload_sensor_data(fni, setup):
         oldkey, newkey = line
         data[newkey] = data[oldkey]
         del data[oldkey]
-    # ==================================================== #
 
     return data
+
 
 def get_ins_data(date, setup):
     """Return ins data of the whole day as dict.
@@ -259,9 +250,8 @@ def get_ins_data(date, setup):
         ins_data : dict
             contains interpolation functions (time) for INS data
     """
-    ###################################################
-    # PREPARATION                                     #
-    ###################################################
+
+    # preparation
     # create list of all INS which need to be loaded
     ins_names = []                  # e.g. ['gps1', 'ins1']
     for key in ('position_sensor_name', 'attitude_sensor_name'):
@@ -291,9 +281,7 @@ def get_ins_data(date, setup):
     # to INS data from their native time grid onto another one (which is
     # specified upon calling the function).
 
-    ###################################################
-    # LOAD DATA                                       #
-    ###################################################
+    # load data
     get_one_ins = io.ins.read.get_data
     path_ins = setup['path_base_ins']
     
@@ -301,10 +289,7 @@ def get_ins_data(date, setup):
         data_ins[ins_name], meta_ins[ins_name] = get_one_ins(
             ins_name, date, path_ins)
     
-    ###################################################
-    # CREATE INTERPOLATION FUNCTIONS                  #
-    ###################################################
-    
+    # create interpolation functions
     for key in _ins_keys:
         intp_key = 'intp_' + key
 
@@ -322,9 +307,9 @@ def get_ins_data(date, setup):
         # store interpolation function for each INS variable in dict
         intp_ins[intp_key] = interp1d(x, y, kind='linear', copy=False,
                                       assume_sorted=True)
-          
-
+        
     return intp_ins
+
 
 def synchronize(data, data_ins, setup):
     """Map all data onto same time grid accounting for offsets.
@@ -357,9 +342,8 @@ def synchronize(data, data_ins, setup):
         -------
         2018-01-28 (AA): Created
     """
-    ###################################################
-    # BUILD 'REAL' TIME LIST                          #
-    ###################################################
+
+    # BUILD 'REAL' TIME LIST
     # seconds since 1970
     t_offset_sec = setup['time_offset_payload_sensor']
     data['secs1970'] = data['secs1970_sensor'] - t_offset_sec
@@ -368,9 +352,7 @@ def synchronize(data, data_ins, setup):
     t_offset_dt = dt.timedelta(seconds=t_offset_sec)
     data['time'] = [t - t_offset_dt for t in data['time_sensor']]
 
-    ###################################################
-    # MAP INS DATA TO 'REAL' TIMES                    #
-    ###################################################
+    # MAP INS DATA TO 'REAL' TIMES
     # this is done by interpolation
     secs = data['secs1970']
     for key in _ins_keys:
@@ -398,9 +380,6 @@ def synchronize(data, data_ins, setup):
     return data
 
 
-###################################################
-# COORDINATE TRANSFORMATIONS                      #
-###################################################
 def create_coordinate_transforms(data, setup):
     """Return transforms as a dict.
 
@@ -432,14 +411,9 @@ def create_coordinate_transforms(data, setup):
     # tr_ij : transform from system Xi to system Xj
     # Tr_ij : list of transforms (time dependent)
 
-    ###################################################
-    # DIMENSIONS                                      #
-    ###################################################
     Ntime = len(data['secs1970'])
 
-    ###################################################
-    # DEVICE                                          #
-    ###################################################
+    # device
     # sensor attitude in Xa
     yaw_sensor_deg = setup['payload_sensor_azimuth_deg']
     pitch_sensor_deg = -90. + setup['payload_sensor_view_angle_deg']
@@ -452,9 +426,7 @@ def create_coordinate_transforms(data, setup):
 
     pos_sensor_Xa = Vector((sensor_x, sensor_y, sensor_z))
 
-    ###################################################
-    # RETRIEVE POSITION AND ATTITUDE                  #
-    ###################################################
+    # retrieve position and attitude
     # INS position
     lon_platform_deg = data['lon_platform']
     lat_platform_deg = data['lat_platform']
@@ -465,9 +437,7 @@ def create_coordinate_transforms(data, setup):
     pitch_deg = data['pitch']
     roll_deg = data['roll']
 
-    ###################################################
-    # CREATE TRANSFORMS                               #
-    ###################################################
+    # create transforms
     # Xs -> Xa  (sensor -> airframe)
     tr_sa = atrans.Xs_to_Xa(
         pos_sensor=pos_sensor_Xa,
