@@ -9,10 +9,6 @@ processing/
 ===========
 Data processing from level 01 (raw data) to higher levels.
 
-analysis/
-=========
-Plotting routines.
-
 utils/
 ======
 Helper functions to the above.
