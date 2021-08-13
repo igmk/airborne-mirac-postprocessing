@@ -39,8 +39,8 @@ Input
 
 Output
 ======
-- level 02a files: data mapped onto a file-constant height grid
-- level 02b files: data mapped onto a globally-constant height grid
+- level 03 files: data mapped onto a globally-constant height grid
+(- level 02a files: data mapped onto a file-constant height grid) # not used
 
 Author
 ======

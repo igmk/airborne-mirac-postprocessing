@@ -34,12 +34,12 @@ variables.
 
 Input
 =====
-- level 02 airborne remote sensing data Z(time, range)
+- level 01a airborne remote sensing data Z(time, range)
 
 Output
 ======
-(level 03)
-netcdf files containing the same data as the level 02, but with added
+(level 02)
+netcdf files containing the same data as the level 01a, but with added
 target velocity variables.
 
 Author

@@ -33,15 +33,15 @@ to the output.
 
 Input
 =====
-- level 01 airborne remote sensing measurements Z(time, range)
+- level 0 airborne remote sensing measurements Z(time, range)
 - aircraft position (lon, lat, alt)
 - aircraft attitude (head, pitch, roll)
 - sensor position and attitude within the aircraft (in the setup file)
 
 Output
 ======
-(level 02)
-netcdf files containing the same data as the level 01, but with added (lon,
+(level 01a)
+netcdf files containing the same data as the level 0, but with added (lon,
 lat, alt)
 data or the target, along with some more information (sensor attitude,
 sensor velocity, ...)

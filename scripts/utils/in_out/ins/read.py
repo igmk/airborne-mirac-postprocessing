@@ -8,7 +8,7 @@ from aa_lib import netcdf as aa_netcdf
 from aa_lib import datetime_utils as aa_dt
 
 # default
-_path_ins = '/data/obs/campaigns/mosaic-aca/ins'
+_path_ins = '/data/obs/campaigns/acloud/ins'
 
 
 def get_data(name, date, path_ins=None, platform='P5'):
