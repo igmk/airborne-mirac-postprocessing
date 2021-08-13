@@ -2,7 +2,7 @@
 Processing of the MiRAC measurements for attitude and viewing geometry
 [Andreas Anhaeuser (AA), 2018-06-28]
 
-
+ 
 A package for processing a variety of airborne remote sensing data. For
 documentation, see folder 'doc'.  (Other) folders:
 

@@ -1,4 +1,18 @@
-#!/usr/bin/python2
+
+
+import os
+import sys
+import datetime as dt
+import numpy as np
+from scipy.interpolate import interp1d
+import utils.in_out as io
+import utils.setup as setup_utils
+import utils.aircraft_transforms as atrans
+from utils.coordinates.transform import Vector
+from aa_lib.chronometer import Chronometer
+import aa_lib.tables as tab
+
+
 """Correct target coordinates of airborne remote sensing data.
 
     Call from command line
@@ -6,14 +20,6 @@
     (1) Modify setup file.
     (2) Then call:
             <scriptname> [<setupfile>]
-
-
-    Please DO NOT CHANGE THE CODE unless this is an improvement! All personal
-    preferences should go into the setup file. If you don't like the default
-    name of the setup file, there are solutions that do not manipulate the
-    code (e. g. create a softlink, or call the script with your setup file as
-    argument).
-
 
     Purpose
     =======
@@ -24,7 +30,6 @@
     additional variables but all variables of the original file copied
     untouched.
 
-
     Input
     =====
     - level 01 airborne remote sensing measurements Z(time, range)
@@ -32,25 +37,12 @@
     - aircraft attitude (head, pitch, roll)
     - sensor position and attitude within the aircraft (in the setup file)
 
-
     Output
     ======
     (level 02)
     netcdf files containing the same data as the level 01, but with added (lon, lat, alt)
     data or the target, along with some more information (sensor attitude,
     sensor velocity, ...)
-
-
-    Before working on this script
-    =============================
-    If you want to understand this script in its entirety, I recommend that you
-    - understand what is a "class" in python
-    - get familiarized with the classes Vector, Rotation and Transform in the
-      `transform` module
-    - understand why and how to transform the coordinates from the sensor
-      reference frame to the geographic reference frame, e. g. by getting
-      the basic idea in [1].
-
 
     Frames of reference
     ===================
@@ -70,12 +62,10 @@
     * Xc is named X in [1]
     * Xs and Xg are not mentioned in [1]
 
-
     References
     ==========
     [1] Lee, Dodge, Marks and Hildebrand: Mapping of Airborne Doppler Radar
     Data, Journal of Atmospheric and Oceanic Technology, 572-578, (11), 1994.
-
 
     Author
     ======
@@ -83,74 +73,27 @@
     Institute for Geophysics and Meteorology
     University of Cologne, Germany
 
-
     History
     =======
     2017-12-12 (AA): Created.
     2018-05-17 (AA): Exported target velocity processing to lev_03 script.
-
-
-    Acknowledgements
-    ================
-    AA would like to express his gratitude to any machine that executes this
-    code.
 """
-# Before working on this script, please read the "Before working on this script"
-# section above.
 
-# ============ python modules  =========================== #
-# A machine that has all these installed is 'sever' (as of Feb 2018).
-import os
-import sys
-import datetime as dt
 
-import numpy as np
-from scipy.interpolate import interp1d
-
-# ========== acloud modules  ============================= #
-import utils.in_out as io
-import utils.setup as setup_utils
-import utils.aircraft_transforms as atrans
-from utils.coordinates.transform import Vector
-
-# ========== Andreas Anhaeuser's modules  ================ #
-# NOTE: If an error is thrown in this section, don't give up!
-# It is very likely that you can easily make the code run:
-#
-# The modules that are imported below are located in
-# /home/anhaeus/py/lib/pub/utils_igmk
-# which I have linked as aa_lib
-# If the code doesn't run, it is likely that for some reason the softlink
-# - does not exist (anymore)
-# - is broken
-# - is in the wrong location.
-#
-# You can ceate the softlink yourself. Open a shell, change to the directory
-#     where you want to execute the code and type:
-#         ln -s /home/anhaeus/py/lib ./aa_lib
-from aa_lib.chronometer import Chronometer
-import aa_lib.tables as tab
-
-###################################################
-# CONSTANTS                                       #
-###################################################
 _pos_keys = ('lon', 'lat', 'alt')
 _att_keys = ('head', 'pitch', 'roll')
 _ins_keys = _pos_keys + _att_keys
 
 # unit vector in direction of sight in Xs coordinates
 # (this is used when correcting the Doppler speed)
-_direction_of_sight = Vector((0., 1., 0.))      # single Vector
+_direction_of_sight = Vector((0., 1., 0.)) 
 
 # ========== defaults  =================================== #
 # This is not meant to be changed. Script and main can be called with
 # non-default setup file as first argument.
 _setup_file = 'setup/setup.txt.lev_02'
 
-###################################################
-# MAIN                                            #
-###################################################
-# this is called from the section 'RUN' at the bottom
+
 def main(setup_file=_setup_file, overwrite=True):
     """Main."""
     ###################################################
@@ -158,7 +101,7 @@ def main(setup_file=_setup_file, overwrite=True):
     ###################################################
     print('read setup file %s' % setup_file)
     setup = tab.read_namelist(setup_file, convert_to_number=True)
-    process_setup(setup)
+    setup_utils.process_setup(setup, chop_lists=True)
 
     # list of filenames
     print('get filenames...')
@@ -251,17 +194,7 @@ def main(setup_file=_setup_file, overwrite=True):
 
     chrono.resumee()
 
-###################################################
-# PREPARATION                                     #
-###################################################
-def process_setup(setup):
-    """Process setup after loading to make it usable by main()."""
-    setup_utils.process_setup(setup, chop_lists=True)
-    return setup
 
-###################################################
-# I/O                                             #
-###################################################
 def get_payload_sensor_data(fni, setup):
     """Return as dict."""
     # ========== read  =================================== #
@@ -280,6 +213,7 @@ def get_payload_sensor_data(fni, setup):
     # ==================================================== #
 
     return data
+
 
 def get_ins_data(date, setup):
     """Return ins data of the whole day as dict.
@@ -356,6 +290,7 @@ def get_ins_data(date, setup):
                                       assume_sorted=True)
 
     return intp_ins
+
 
 def synchronize(data, data_ins, setup):
     """Map all data onto same time grid while accounting for offsets.
@@ -824,5 +759,3 @@ if __name__ == '__main__':
         setup_file = _setup_file
 
     main(setup_file=setup_file)
-
-# thank you.
