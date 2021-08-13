@@ -1,45 +1,34 @@
 # airborne-mirac-correction
 Processing of the MiRAC measurements for attitude and viewing geometry
 [Andreas Anhaeuser (AA), 2018-06-28]
-
  
 A package for processing a variety of airborne remote sensing data. For
 documentation, see folder 'doc'.  (Other) folders:
-
 
 processing/
 ===========
 Data processing from level 01 (raw data) to higher levels.
 
-
 analysis/
 =========
 Plotting routines.
-
 
 utils/
 ======
 Helper functions to the above.
 
-
 aa_lib/
 =======
 Link to AA's python library.
-
 
 setup/
 ======
 Setup files to processing and anaylsis scripts.
 
-
 doc/
 ====
 Documentation (pdf).
 
-
-tiny_scripts/
-=============
-Use-and-dispose scripts for special purposes. Not intended for automatization.
 How to run one processing step
 ==============================
 
