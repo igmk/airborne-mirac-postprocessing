@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import os
 import datetime
@@ -7,11 +7,9 @@ from netCDF4 import Dataset
 from aa_lib import netcdf as aa_netcdf
 from aa_lib import datetime_utils as aa_dt
 
-# default
-_path_ins = '/data/obs/campaigns/acloud/ins'
+_path_ins = '/data/obs/campaigns/'
 
-
-def get_data(name, date, path_ins=None, platform='P5'):
+def get_data(name, date, flight, platform='polar5', path_ins=_path_ins):
     """Return INS data in form of two dict.
 
         Parameters
@@ -31,21 +29,18 @@ def get_data(name, date, path_ins=None, platform='P5'):
     """
 
     ###################################################
-    # DEFAULT                                         #
-    ###################################################
-    if path_ins is None:
-        path_ins = _path_ins
-
-    ###################################################
     # PATH                                            #
     ###################################################
-    yyyymmdd = date.strftime('%Y%m%d')
-    path = _path_ins + '/%s/%s' % (platform, name)
+    yyyy = date.strftime('%Y')
+    mm   = date.strftime('%m')
+    dd   = date.strftime('%d')
+    yyyymmdd = yyyy + mm + dd
+    path = path_ins + '%s/gps_ins/%s/%s/%s/' % (name.lower(), yyyy, mm, dd)
     print(path)
     if not os.path.isdir(path):
         raise IOError()
-    
-    fn = path + '/%s_%s_%s.nc' % (platform, name, yyyymmdd)
+
+    fn = path + '%s_%s_%s_%s.nc' % (name, platform, yyyymmdd, flight)
     print(fn)
     if not os.path.isfile(fn):
         raise IOError()
