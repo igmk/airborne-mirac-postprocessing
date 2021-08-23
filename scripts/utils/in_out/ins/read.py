@@ -57,5 +57,6 @@ def get_data(name, date, research_flight, path_ins=_path_ins, platform='polar5')
     meta['secs1970'] = meta['time']
     data['time'] = aa_dt.seconds_to_datetime(data['secs1970'])
     meta['time'] = {}
+    data['speed'] = 0,514444*data['gs'] #convert knts to m s 
 
     return data, meta
