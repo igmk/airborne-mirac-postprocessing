@@ -9,7 +9,7 @@ from aa_lib import datetime_utils as aa_dt
 
 _path_ins = '/data/obs/campaigns/'
 
-def get_data(name, date, flight, platform='polar5', path_ins=_path_ins):
+def get_data(name, date, research_flight, path_ins=_path_ins, platform='polar5'):
     """Return INS data in form of two dict.
 
         Parameters
