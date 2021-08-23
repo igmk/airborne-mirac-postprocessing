@@ -264,9 +264,10 @@ def get_ins_data(date, setup):
     ###################################################
     get_one_ins = io.ins.read.get_data
     path_ins = setup['path_base_ins']
+    research_flight = setup['research_flight']
     for ins_name in ins_names:
         data_ins[ins_name], meta_ins[ins_name] = get_one_ins(
-            ins_name, date, path_ins)
+            ins_name, date, research_flight, path_ins)
 
     ###################################################
     # CREATE INTERPOLATION FUNCTIONS                  #
