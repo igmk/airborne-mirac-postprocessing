@@ -40,7 +40,7 @@ def get_data(name, date, research_flight, path_ins=_path_ins, platform='polar5')
     if not os.path.isdir(path):
         raise IOError()
 
-    fn = path + '%s_%s_%s_%s.nc' % (name, platform, yyyymmdd, flight)
+    fn = path + '%s_%s_%s_%s.nc' % (name, platform, yyyymmdd, research_flight)
     print(fn)
     if not os.path.isfile(fn):
         raise IOError()
