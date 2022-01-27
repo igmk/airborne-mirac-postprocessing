@@ -9,7 +9,7 @@ from aa_lib import datetime_utils as aa_dt
 
 _path_ins = '/data/obs/campaigns/'
 
-def get_data(name, date, research_flight, path_ins=_path_ins, platform='polar5'):
+def get_data(name, date, research_flight, campaign, path_ins=_path_ins, platform='polar5'):
     """Return INS data in form of two dict.
 
         Parameters
@@ -35,12 +35,11 @@ def get_data(name, date, research_flight, path_ins=_path_ins, platform='polar5')
     mm   = date.strftime('%m')
     dd   = date.strftime('%d')
     yyyymmdd = yyyy + mm + dd
-    path = path_ins + '%s/gps_ins/%s/%s/%s/' % (name.lower(), yyyy, mm, dd)
-    print(path)
+    path = path_ins + '/%s/%s/%s/' % (yyyy, mm, dd)
     if not os.path.isdir(path):
         raise IOError()
 
-    fn = path + '%s_%s_%s_%s.nc' % (name, platform, yyyymmdd, research_flight)
+    fn = path + '%s_%s_%s_%s_%s.nc' % (name, campaign, platform, yyyymmdd, research_flight)
     print(fn)
     if not os.path.isfile(fn):
         raise IOError()

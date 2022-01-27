@@ -105,7 +105,7 @@
 
     Todo
     ====
-    The restriction that the calibration time has to be an contiguous interval
+    The restriction that the calibration time has to be a contiguous interval
     may be troublesome.  Marek Jacob had the idea to implement the possibility
     to somehow flag the desired time steps.
 
@@ -151,7 +151,7 @@ def from_command_line(lev_out):
     # DEFAULT VALUES                                  #
     ###################################################
     timestamp_beg = dt.datetime.now().strftime('%Y%m%d-%H%M%S')
-    plot_path_out = '/home/nrisse/WHK/radar_processing/plt/'
+    plot_path_out = '~/Documents'
     plot_file_out = None # '%s/lev_%s_calibrate_%s.eps' % (
         # plot_path_out, lev_out, timestamp_beg)
 

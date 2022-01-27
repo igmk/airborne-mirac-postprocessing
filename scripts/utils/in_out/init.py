@@ -7,11 +7,11 @@ def import_sensor(setup):
         sensor_name = setup['payload_sensor_name']
 
         if sensor_name == 'amali':
-            import amali as io_sensor
+            import utils.in_out.amali as io_sensor
         elif sensor_name == 'hampmira':
-            import hampmira as io_sensor
+            import utils.in_out.hampmira as io_sensor
         elif sensor_name == 'mirac':
-            import mirac as io_sensor
+            import utils.in_out.mirac as io_sensor
 
         setup['io_sensor'] = io_sensor
 

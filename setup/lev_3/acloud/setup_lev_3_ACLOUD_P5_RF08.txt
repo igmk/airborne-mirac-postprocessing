@@ -1,0 +1,79 @@
+# Setup file for level 2a & 2b files
+# Remap data onto constant altitude grid
+
+# Use # as comment sign.
+# Use ' to denote strings where ambiguous.
+
+# CAUTION: Do NOT use leading zeros!
+# (otherwise the number is interpreted as octal)
+
+###################################################
+# AUTHOR                                          #
+###################################################
+# Author of the output data (i. e. YOU)
+author : 'Nils Risse'
+author_initials : 'NR'
+institution : 'Institute for Geophysics and Meteorology Cologne (Germany)'
+
+
+###################################################
+# INPUT                                           #
+###################################################
+# path base of input files
+path_base_in : /net/secaire/nrisse/radar_processing/acloud/mirac_radar
+
+# path base of position and attitude sensors
+# (the program expects subfolders with the sensor name(s) therein)
+path_base_ins : /net/secaire/nrisse/radar_processing/acloud/gps_ins
+
+# input level
+lev_in : 'lev_2'
+
+# sensor name 
+payload_sensor_name : 'mirac'
+
+###################################################
+# OUTPUT                                          #
+###################################################
+path_base_out : /net/secaire/nrisse/radar_processing/acloud/mirac_radar
+nc_format : NETCDF4
+
+nc_string_length : 1024
+
+# output level
+lev_out: 'lev_3'
+
+# ======================================================== #
+# ALTITUDE GRID
+alt_grid_type : 'globally_constant'  # 'file_constant' or 'globally_constant'
+
+# Output altitude array for globally constant grid:
+alt_min : -1000.     # (m) inclusive
+alt_max :  6000.     # (m) exclusive
+alt_inc :     5.     # (m)
+# ======================================================== #
+
+
+###################################################
+# TIME                                            #
+###################################################
+# Do NOT use leading zeros!
+
+# start (inclusive)
+year_beg : 2017
+month_beg : 5
+day_beg : 29
+hour_beg : 3
+minute_beg : 54
+second_beg : 15
+
+# end (exclusive)
+year_end : 2017
+month_end : 5
+day_end : 29
+hour_end : 8
+minute_end : 51
+second_end : 0
+
+research_flight : 'RF08'
+campaign : 'ACLOUD'

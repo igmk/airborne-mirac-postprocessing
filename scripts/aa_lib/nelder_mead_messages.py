@@ -2,7 +2,9 @@
 # Embedded file name: /home/anhaeus/acloud/aa_utils/processing/aa_lib/nelder_mead_messages.py
 # Compiled at: 2018-11-08 17:45:09
 """Interactive message display sub-module to nelder_mead."""
-import datetime as dt, string_utils as su
+import datetime as dt
+from aa_lib import string_utils as su
+
 _col_widths = [
  25, 21, 21, 12]
 
@@ -103,7 +105,7 @@ def get_exit_limit_line(record, options, parameter):
                     rem = dt.timedelta(0)
                 else:
                     rem = maxtime - passed
-                rem_str = max(0, nice_timedelta_string(rem))
+                rem_str = max("0", nice_timedelta_string(rem))
                 annotation = rem_str + ' remaining'
     cws = _col_widths
     fraction = min(1, 1.0 * val / val_max)
@@ -207,11 +209,11 @@ def get_action_history_section(record, options):
     endc = su.color(None)
     chars = 'ISCRE'
     symbols = (
-     unichr(9604),
-     unichr(9601),
-     unichr(9602),
-     unichr(9604),
-     unichr(9608))
+     chr(9604),
+     chr(9601),
+     chr(9602),
+     chr(9604),
+     chr(9608))
     length = sum(_col_widths) + 2 * len(_col_widths)
     actions = record['action'][-length:]
     line_header = su.color('bold') + 'Simplex modification:\n' + endc

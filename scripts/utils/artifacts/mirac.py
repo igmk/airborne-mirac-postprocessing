@@ -53,10 +53,10 @@ import datetime as dt
 import numpy as np
 
 # sub-modules
-import mirac_subsurface_reflection_filter as subsurface_reflection
-import mirac_snr_filter as snr
-import mirac_speckle_filter as speckle
-import mirac_defective_gate_filter as defective_gates
+from utils.artifacts import mirac_subsurface_reflection_filter as subsurface_reflection
+from utils.artifacts import mirac_snr_filter as snr
+from utils.artifacts import mirac_speckle_filter as speckle
+from utils.artifacts import mirac_defective_gate_filter as defective_gates
 
 _DEBUG = False
 

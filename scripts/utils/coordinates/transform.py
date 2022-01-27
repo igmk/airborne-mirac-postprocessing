@@ -91,7 +91,7 @@
 from copy import deepcopy as copy
 import numpy as np
 
-import conversions as conv
+import utils.coordinates.conversions as conv
 
 ###################################################
 # CLASSES                                         #
@@ -1022,10 +1022,10 @@ if __name__ == '__main__':
     T = Transform(v2, R)
     v6 = T(v4)
 
-    print R
-    print v1
-    print v5
-    print '-' * 12
-    print T
-    print v4
-    print v6
+    print(R)
+    print(v1)
+    print(v5)
+    print('-' * 12)
+    print(T)
+    print(4)
+    print(v6)

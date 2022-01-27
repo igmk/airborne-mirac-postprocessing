@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import mirac
+from utils.artifacts import mirac
 
 def main(data, setup):
     """Delegate job to sensor-specific module.

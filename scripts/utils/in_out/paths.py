@@ -11,7 +11,7 @@ import re
 from netCDF4 import Dataset
 
 # Acloud modules
-import init
+from utils.in_out import init
 
 # AA's library
 from aa_lib import datetime_utils

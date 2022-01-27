@@ -3,7 +3,7 @@
 
 import numpy as np
 
-from coordinates.transform import Vector, Rotation, Transform
+from utils.coordinates.transform import Vector, Rotation, Transform
 
 # ========== # constants  ================================ #
 _RE = 6371e3    # (m) mean Earth radius

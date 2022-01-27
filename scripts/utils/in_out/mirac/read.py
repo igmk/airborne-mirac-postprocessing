@@ -129,7 +129,7 @@ def convert_time(data, meta, setup={}):
     # assert that assumed reference date appears in meta data
     assert 'time' in data
     assert 'units' in meta['time']
-    patterns = ['1.1.2001', '2001.01.01']
+    patterns = ['1.1.2001', '2001.01.01', '2001-01-01']
     found = False
     for pattern in patterns:
         if pattern in meta['time']['long_name'] or pattern in meta['time']['units']:
