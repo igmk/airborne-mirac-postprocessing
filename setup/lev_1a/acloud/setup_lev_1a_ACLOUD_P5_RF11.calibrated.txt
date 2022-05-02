@@ -1,4 +1,4 @@
-# This file was automatically created by step_1a_0_calibration.py on 2022-01-25 18:38:58.
+# This file was automatically created by step_1a_0_calibration.py on 2022-03-05 20:25:41.
 # Setup file for MIRAC calibration
 
 # Use # as comment sign.

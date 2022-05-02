@@ -138,7 +138,7 @@ def check_date(data, setup):
     # ( (start1, end1), (start2, end2), ...)
     # start: inclusive, end: exclusive
     intervals = (
-            (dt.datetime(2017, 5, 23), dt.datetime(2020, 9, 15)),
+            (dt.datetime(2017, 5, 23), dt.datetime(2022, 4, 30)),
             # (another_start_time, another_end_time),
             )
 
