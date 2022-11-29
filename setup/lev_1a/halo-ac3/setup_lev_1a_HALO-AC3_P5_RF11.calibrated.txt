@@ -1,4 +1,4 @@
-# This file was automatically created by step_1a_0_calibration.py on 2022-04-09 21:19:31.
+# This file was automatically created by step_1a_0_calibration.py on 2022-07-18 16:08:32.
 # Setup file for MIRAC calibration
 
 # Use # as comment sign.
@@ -129,8 +129,8 @@ position_sensor_z :  2.049      # (m) direction towards stabilizer
 # azimuth :       forward       twd right wing     backward     twd left wing
 # view angle :    downward      horizontal         upward       ---
 #
-payload_sensor_azimuth_deg : 177.22633594622084, 0.028298621300734794, 0.05      # (see definition above)
-payload_sensor_view_angle_deg : 25.650649713328207, 0.0017751488433148666, 0.05    # (see definition above)
+payload_sensor_azimuth_deg : 177.42698160039248, 0.02983383624120961, 0.05      # (see definition above)
+payload_sensor_view_angle_deg : 25.740741616297065, 0.0016856961352544886, 0.05    # (see definition above)
 
 
 ###################################################
@@ -139,8 +139,8 @@ payload_sensor_view_angle_deg : 25.650649713328207, 0.0017751488433148666, 0.05 
 # real_time = record_time - time_offset
 # (positive offset: data are recorded too late)
 time_offset_payload_sensor : 0.                 # (s)
-time_offset_position_sensor : -0.25449372564632994, 0.006329202688224289, 0.05   # (s)
-time_offset_attitude_sensor : 1.4372857947424449, 0.006985769552590337, 0.05   # (s)
+time_offset_position_sensor : 0.7965022126222439, 0.012731961434606642, 0.05   # (s)
+time_offset_attitude_sensor : 1.422889562402709, 0.00316243376416514, 0.05   # (s)
 
 
 ###################################################

@@ -1,4 +1,4 @@
-# This file was automatically created by step_2_0_calibration.py on 2022-03-06 00:58:00.
+# This file was automatically created by step_2_0_calibration.py on 2022-07-18 16:38:52.
 # Use # as comment sign.
 # Use ' to denote strings where ambiguous.
 
@@ -67,7 +67,7 @@ second_end : 0
 # BEAM PROPERTIES                                 #
 ###################################################
 # beam width
-beam_fwhm_deg : 1.20361328125, 0.0009765625, 0.001              # full width at half maximum
+beam_fwhm_deg : 1.11669921875, 0.0009765625, 0.001              # full width at half maximum
 
 
 ###################################################

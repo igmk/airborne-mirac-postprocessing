@@ -31,15 +31,10 @@ def get_data(name, date, research_flight, campaign, path_ins=_path_ins, platform
     ###################################################
     # PATH                                            #
     ###################################################
-    yyyy = date.strftime('%Y')
-    mm   = date.strftime('%m')
-    dd   = date.strftime('%d')
-    yyyymmdd = yyyy + mm + dd
-    path = path_ins + '/%s/%s/%s/' % (yyyy, mm, dd)
-    if not os.path.isdir(path):
+    if not os.path.isdir(path_ins):
         raise IOError()
 
-    fn = path + '%s_%s_%s_%s_%s.nc' % (name, campaign, platform, yyyymmdd, research_flight)
+    fn = path_ins + f'/{campaign}_P5_GPS_INS_{date.strftime("%Y%m%d")}_{research_flight}.nc'
     print(fn)
     if not os.path.isfile(fn):
         raise IOError()

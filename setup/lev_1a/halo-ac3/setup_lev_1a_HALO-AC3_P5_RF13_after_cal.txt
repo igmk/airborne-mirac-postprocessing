@@ -119,8 +119,8 @@ position_sensor_z :  2.049      # (m) direction towards stabilizer
 # azimuth :       forward       twd right wing     backward     twd left wing
 # view angle :    downward      horizontal         upward       ---
 
-payload_sensor_azimuth_deg : 176.959598
-payload_sensor_view_angle_deg : 25.702812
+payload_sensor_azimuth_deg : 176.999382
+payload_sensor_view_angle_deg : 25.745868
 
 ###################################################
 # TIME OFFSETS                                    #
@@ -128,8 +128,8 @@ payload_sensor_view_angle_deg : 25.702812
 # real_time = record_time - time_offset
 # (positive offset: data are recorded too late)
 time_offset_payload_sensor : 0.
-time_offset_position_sensor : 0.487156
-time_offset_attitude_sensor : 2.199611
+time_offset_position_sensor : 1.116468
+time_offset_attitude_sensor : 2.058546
 
 ###################################################
 # EXTERNAL ANCILLARY DATA                         #

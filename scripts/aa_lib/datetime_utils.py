@@ -12,7 +12,7 @@
 
 # standard modules
 import calendar
-import collections
+from collections.abc import Iterable
 import datetime as dt
 
 # PyPI modules
@@ -279,7 +279,7 @@ def datetime_to_seconds(d, reference_date=dt.datetime(1970, 1, 1)):
         d = dt.datetime(d.year, d.month, d.day)
 
     # recursively call function:
-    if isinstance(d, collections.Iterable):
+    if isinstance(d, Iterable):
         if len(d) == 0:
             return []
         else:
@@ -328,7 +328,7 @@ def seconds_to_datetime(seconds, reference_date=dt.datetime(1970, 1, 1)):
     if ref.__class__ == dt.date:
         ref = dt.datetime(ref.year, ref.month, ref.day)
 
-    if isinstance(seconds, collections.Iterable):
+    if isinstance(seconds, Iterable):
         return [seconds_to_datetime(s, ref) for s in seconds]
 
     if np.isnan(seconds):
@@ -355,7 +355,7 @@ def julian_days_to_datetime(days):
         ------
         Moderately. Seems to be working but no guarantee.
     """
-    if isinstance(days, collections.Iterable):
+    if isinstance(days, Iterable):
         return([julian_days_to_datetime(d) for d in days])
     JD0 = 1721425.5  # Julian date of 1st Jan 1, 00:00
     return dt.datetime(1, 1, 1) + dt.timedelta(days=days - JD0)
@@ -371,7 +371,7 @@ def datetime_to_julian_days(time):
         -------
         float or array of such
     """
-    if isinstance(time, collections.Iterable):
+    if isinstance(time, Iterable):
         return np.array([datetime_to_julian_days(t) for t in time])
     JD0 = 1721425.5  # Julian date of 1st Jan 1, 00:00
     diff = (time - dt.datetime(1, 1, 1))
@@ -406,7 +406,7 @@ def doy(date):
     ###################################################
     # RECURSIVE FUNCTION CALL FOR LISTS               #
     ###################################################
-    if isinstance(date, collections.Iterable):
+    if isinstance(date, Iterable):
         S = np.shape(date)
         assert len(S) == 1
         N = S[0]
@@ -521,7 +521,7 @@ def sod_doy(time):
     ###################################################
     # RECURSIVE FUNCTION CALL FOR LISTS               #
     ###################################################
-    if isinstance(time, collections.Iterable):
+    if isinstance(time, Iterable):
         S = np.shape(time)
         assert len(S) == 1
         N = S[0]

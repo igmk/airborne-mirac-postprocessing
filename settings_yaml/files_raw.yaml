@@ -1,0 +1,513 @@
+ACLOUD_P5_RF04:
+  chirp_1:
+  - mirac_a_p_5_170523_084545_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170523_090000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170523_091349_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170523_100000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170523_110000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170523_120000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170523_125358_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170523_130000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170523_140000_P02_ZEN_v2.0.nc
+ACLOUD_P5_RF05:
+  chirp_1:
+  - mirac_a_p_5_170525_081818_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170525_090000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170525_100000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170525_110000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_170525_120000_P02_ZEN_v2.0.nc
+ACLOUD_P5_RF06:
+  chirp_1:
+  - mirac_a_p_5_170527_080236_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170527_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170527_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170527_110000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF07:
+  chirp_1:
+  - mirac_a_p_5_170527_124515_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170527_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170527_130816_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170527_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170527_150001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170527_160001_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF08:
+  chirp_1:
+  - mirac_a_p_5_170529_045152_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170529_050001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170529_060000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170529_070000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF10:
+  chirp_1:
+  - mirac_a_p_5_170531_150254_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170531_160000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170531_170000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170531_180000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF11:
+  chirp_1:
+  - mirac_a_p_5_170602_083228_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170602_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170602_095531_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170602_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170602_102300_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170602_103010_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170602_104005_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170602_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170602_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170602_130000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF14:
+  chirp_1:
+  - mirac_a_p_5_170608_071941_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170608_080001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170608_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170608_100001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170608_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170608_120000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF15:
+  chirp_1:
+  - mirac_a_p_5_170609_080130_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170609_090001_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF16:
+  chirp_1:
+  - mirac_a_p_5_170613_145646_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170613_150000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170613_160001_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF17:
+  chirp_1:
+  - mirac_a_p_5_170614_125039_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170614_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170614_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170614_150000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170614_160000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170614_170000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170614_180000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF18:
+  chirp_1:
+  - mirac_a_p_5_170616_044657_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170616_050000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170616_050810_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170616_051418_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170616_060000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170616_070000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170616_080000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170616_090000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF19:
+  chirp_1:
+  - mirac_a_p_5_170617_095552_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170617_100001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170617_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170617_120000_P04_ZEN_v2.0.nc
+  chirp_2:
+  - mirac_a_p_5_170617_122728_P08_ZEN_v2.0.nc
+  chirp_3:
+  - mirac_a_p_5_170617_124204_P09_ZEN_v2.0.nc
+  - mirac_a_p_5_170617_130000_P09_ZEN_v2.0.nc
+  - mirac_a_p_5_170617_140000_P09_ZEN_v2.0.nc
+  - mirac_a_p_5_170617_150001_P09_ZEN_v2.0.nc
+ACLOUD_P5_RF20:
+  chirp_1:
+  - mirac_a_p_5_170618_120443_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170618_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170618_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170618_150000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170618_160000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170618_170000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF21:
+  chirp_1:
+  - mirac_a_p_5_170620_073300_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170620_080001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170620_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170620_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170620_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170620_120002_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170620_130000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF22:
+  chirp_1:
+  - mirac_a_p_5_170623_104115_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170623_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170623_120001_P04_ZEN_v2.0.nc
+  chirp_2:
+  - mirac_a_p_5_170623_125320_P08_ZEN_v2.0.nc
+  - mirac_a_p_5_170623_130001_P08_ZEN_v2.0.nc
+  chirp_3:
+  - mirac_a_p_5_170623_134755_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170623_140000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF23:
+  chirp_1:
+  - mirac_a_p_5_170625_110835_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170625_120001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170625_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170625_140001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170625_150000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170625_160000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170625_170000_P04_ZEN_v2.0.nc
+ACLOUD_P5_RF25:
+  chirp_1:
+  - mirac_a_p_5_170626_123612_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170626_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170626_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_170626_150001_P04_ZEN_v2.0.nc
+AFLUX_P5_RF02:
+  chirp_1:
+  - mirac_a_p_5_190319_163839_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_190319_170000_P02_ZEN_v2.0.nc
+AFLUX_P5_RF03:
+  chirp_1:
+  - mirac_a_p_5_190321_095253_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_190321_100000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_190321_110001_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_190321_120000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_190321_130000_P02_ZEN_v2.0.nc
+  - mirac_a_p_5_190321_140000_P02_ZEN_v2.0.nc
+AFLUX_P5_RF04:
+  chirp_1:
+  - mirac_a_p_5_190323_101043_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190323_113321_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190323_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190323_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190323_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190323_150001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190323_160000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF05:
+  chirp_1:
+  - mirac_a_p_5_190324_094251_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190324_100301_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190324_100446_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190324_110001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190324_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190324_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190324_140000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF06:
+  chirp_1:
+  - mirac_a_p_5_190325_103652_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190325_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190325_120001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190325_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190325_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190325_150000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190325_151253_P04_ZEN_v2.0.nc
+AFLUX_P5_RF07:
+  chirp_1:
+  - mirac_a_p_5_190330_095129_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190330_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190330_110003_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190330_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190330_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190330_140001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190330_150000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF08:
+  chirp_1:
+  - mirac_a_p_5_190331_090054_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190331_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190331_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190331_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190331_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190331_140000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF09:
+  chirp_1:
+  - mirac_a_p_5_190401_071433_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190401_080000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190401_090001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190401_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190401_110001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190401_120000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF10:
+  chirp_1:
+  - mirac_a_p_5_190403_101500_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190403_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190403_120001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190403_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190403_140000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF11:
+  chirp_1:
+  - mirac_a_p_5_190404_083045_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190404_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190404_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190404_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190404_120000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF12:
+  chirp_1:
+  - mirac_a_p_5_190406_100242_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190406_110002_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190406_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190406_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190406_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190406_150000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF13:
+  chirp_1:
+  - mirac_a_p_5_190407_065550_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190407_070000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190407_080001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190407_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190407_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190407_110001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190407_120000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF14:
+  chirp_1:
+  - mirac_a_p_5_190408_084854_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190408_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190408_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190408_110001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190408_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190408_130000_P04_ZEN_v2.0.nc
+AFLUX_P5_RF15:
+  chirp_1:
+  - mirac_a_p_5_190411_092208_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190411_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190411_110001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190411_120001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190411_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190411_140001_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_190411_150000_P04_ZEN_v2.0.nc
+HALO-AC3_P5_RF01:
+  chirp_1:
+  - mirac_a_p_5_220320_111513_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220320_120000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220320_130000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220320_140000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220320_150000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF02:
+  chirp_1:
+  - mirac_a_p_5_220322_082924_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220322_090000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF03:
+  chirp_1:
+  - mirac_a_p_5_220322_112558_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220322_120001_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220322_130000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220322_140000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220322_150000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF04:
+  chirp_1:
+  - mirac_a_p_5_220325_110729_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220325_120000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220325_130000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220325_140000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220325_150000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220325_160000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF05:
+  chirp_1:
+  - mirac_a_p_5_220328_114552_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220328_120000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220328_130000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220328_140000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220328_150000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220328_160000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF06:
+  chirp_1:
+  - mirac_a_p_5_220329_082803_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220329_090000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF07:
+  chirp_1:
+  - mirac_a_p_5_220329_120147_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220329_130000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220329_140000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220329_150000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220329_160000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF08:
+  chirp_1:
+  - mirac_a_p_5_220330_111041_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220330_120000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220330_130000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220330_140000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220330_150000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF09:
+  chirp_1:
+  - mirac_a_p_5_220401_084206_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220401_090000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220401_100000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220401_110000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220401_120000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220401_130000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF10:
+  chirp_1:
+  - mirac_a_p_5_220404_094347_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220404_100000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220404_110000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220404_120000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220404_130000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF11:
+  chirp_1:
+  - mirac_a_p_5_220405_090814_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220405_100000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220405_110000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220405_120000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220405_130000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF12:
+  chirp_1:
+  - mirac_a_p_5_220407_085937_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220407_090000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220407_100000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220407_110000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220407_120001_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220407_130000_P03_ZEN_v2.0.nc
+HALO-AC3_P5_RF13:
+  chirp_1:
+  - mirac_a_p_5_220410_085028_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220410_090000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220410_100000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220410_110000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220410_120000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220410_130000_P03_ZEN_v2.0.nc
+  - mirac_a_p_5_220410_140000_P03_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF02:
+  chirp_1:
+  - mirac_a_p_5_200830_073334_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200830_080000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200830_085301_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200830_085641_P04_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF03:
+  chirp_1:
+  - mirac_a_p_5_200831_095846_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_103850_P04_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF04:
+  chirp_1:
+  - mirac_a_p_5_200831_111046_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_125323_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_132943_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_134630_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_140150_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_140459_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200831_143152_P04_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF05:
+  chirp_1:
+  - mirac_a_p_5_200902_064325_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_070000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_071851_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_072800_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_074819_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_080000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_080649_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_082434_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_084240_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_085324_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_091008_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_093903_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_100420_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_105542_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_111337_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_114832_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200902_120705_P04_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF06:
+  chirp_1:
+  - mirac_a_p_5_200904_115731_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_123051_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_124930_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_130742_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_132526_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_133203_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_135026_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_140910_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_142744_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_144550_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_145610_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_150000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_151405_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_153035_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_153222_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_155020_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_160000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_160823_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_162635_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_164315_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_170005_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_172027_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200904_173817_P04_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF07:
+  chirp_1:
+  - mirac_a_p_5_200907_074606_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_080000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_080829_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_081258_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_081914_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_082830_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_083800_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_084710_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_090516_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_092300_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_094226_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_102018_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_103901_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_105639_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_111637_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_113522_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_115636_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_122155_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_124003_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_125811_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_131549_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200907_133414_P04_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF08:
+  chirp_1:
+  - mirac_a_p_5_200908_074052_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_080000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_081222_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_082958_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_084749_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_090540_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_092351_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_094202_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_100046_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_101845_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_103629_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_105412_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_111204_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_112131_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_113755_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_115546_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_123006_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_125923_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_133204_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_133509_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200908_140000_P04_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF09:
+  chirp_1:
+  - mirac_a_p_5_200910_084125_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200910_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200910_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200910_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200910_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200910_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200910_140000_P04_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF10:
+  chirp_1:
+  - mirac_a_p_5_200911_080340_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200911_085643_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200911_085719_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200911_090000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200911_091238_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200911_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200911_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200911_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200911_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200911_140000_P04_ZEN_v2.0.nc
+MOSAiC-ACA_P5_RF11:
+  chirp_1:
+  - mirac_a_p_5_200913_090604_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_093927_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_094025_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_094340_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_100000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_102434_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_104130_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_110000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_120000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_130000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_140000_P04_ZEN_v2.0.nc
+  - mirac_a_p_5_200913_150000_P04_ZEN_v2.0.nc
