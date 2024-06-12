@@ -56,7 +56,7 @@ def get_data(name, date, research_flight, campaign, path_ins=_path_ins, platform
     meta['secs1970'] = meta['time']
     data['time'] = aa_dt.seconds_to_datetime(data['secs1970'])
     meta['time'] = {}
-    data['speed'] = 0,514444*data.pop('gs') #convert knts to m s
+    data['speed'] = 0.514444*data.pop('gs') #convert knts to m s
     data['head'] = data.pop('heading')
 
     return data, meta
