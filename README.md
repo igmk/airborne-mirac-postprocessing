@@ -57,13 +57,21 @@ Build this structure. Individual files are sorted in yyyy/mm/dd directories.
 Radar name is either "mirac_radar" by "grawac"
 
 ├── campaign
+
 │   ├── gps_ins
+
 │   └── radar_name
+
 │       ├── lev_0
+
 │       ├── lev_1a
+
 │       ├── lev_2
+
 │       ├── lev_3
+
 │       ├── raw
+
 │       └── raw_rpg
 
 ### Raw_rpg

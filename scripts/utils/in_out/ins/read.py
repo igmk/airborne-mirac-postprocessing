@@ -34,7 +34,12 @@ def get_data(name, date, research_flight, campaign, path_ins=_path_ins, platform
     if not os.path.isdir(path_ins):
         raise IOError()
 
-    fn = path_ins + f'/{campaign}_P5_GPS_INS_{date.strftime("%Y%m%d")}_{research_flight}.nc'
+    if platform == "polar5":
+        p = "P5"
+    elif platform == "polar6":
+        p = "P6"
+
+    fn = path_ins + f'/{campaign}_{p}_GPS_INS_{date.strftime("%Y%m%d")}_{research_flight}.nc'
     print(fn)
     if not os.path.isfile(fn):
         raise IOError()
