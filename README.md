@@ -1,4 +1,4 @@
-# airborne-mirac-correction
+# Airborne radar post-processing
 Processing of the MiRAC measurements for attitude and viewing geometry
 [Andreas Anhaeuser (AA), 2018-06-28]
 
