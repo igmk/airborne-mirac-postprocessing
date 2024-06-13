@@ -8,9 +8,9 @@ from copy import deepcopy as copy
 from netCDF4 import Dataset
 
 # Acloud modules
-import init
-import paths
-import write_helpers as helpers
+from utils.in_out import init
+from utils.in_out import paths
+from utils.in_out import write_helpers as helpers
 
 ###################################################
 # MAIN FUNCTION                                   #

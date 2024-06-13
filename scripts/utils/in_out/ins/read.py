@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import os
 import datetime
@@ -7,11 +7,9 @@ from netCDF4 import Dataset
 from aa_lib import netcdf as aa_netcdf
 from aa_lib import datetime_utils as aa_dt
 
-# default
-_path_ins = '/data/obs/campaigns/acloud/ins'
+_path_ins = '/data/obs/campaigns/'
 
-
-def get_data(name, date, path_ins=None, platform='P5'):
+def get_data(name, date, research_flight, campaign, path_ins=_path_ins, platform='polar5'):
     """Return INS data in form of two dict.
 
         Parameters
@@ -31,21 +29,17 @@ def get_data(name, date, path_ins=None, platform='P5'):
     """
 
     ###################################################
-    # DEFAULT                                         #
-    ###################################################
-    if path_ins is None:
-        path_ins = _path_ins
-
-    ###################################################
     # PATH                                            #
     ###################################################
-    yyyymmdd = date.strftime('%Y%m%d')
-    path = _path_ins + '/%s/%s' % (platform, name)
-    print(path)
-    if not os.path.isdir(path):
+    if not os.path.isdir(path_ins):
         raise IOError()
-    
-    fn = path + '/%s_%s_%s.nc' % (platform, name, yyyymmdd)
+
+    if platform == "polar5":
+        p = "P5"
+    elif platform == "polar6":
+        p = "P6"
+
+    fn = path_ins + f'/{campaign}_{p}_GPS_INS_{date.strftime("%Y%m%d")}_{research_flight}.nc'
     print(fn)
     if not os.path.isfile(fn):
         raise IOError()
@@ -62,5 +56,7 @@ def get_data(name, date, path_ins=None, platform='P5'):
     meta['secs1970'] = meta['time']
     data['time'] = aa_dt.seconds_to_datetime(data['secs1970'])
     meta['time'] = {}
+    data['speed'] = 0.514444*data.pop('gs') #convert knts to m s
+    data['head'] = data.pop('heading')
 
     return data, meta

@@ -28,11 +28,11 @@ def get_source(fid, data, setup):
         source = source + ' %s (%s),' % (name, what)
     if 'position_sensor_name' in data:
         what = 'position sensor'
-        name = data['position_sensor_name'].strip('\0')
+        name = 'gps_ins'  #data['position_sensor_name'].strip('\0')
         source = source + ' %s (%s),' % (name, what)
     if 'attitude_sensor_name' in data:
         what = 'attitude sensor'
-        name = data['attitude_sensor_name'].strip('\0')
+        name = 'gps_ins'  #data['attitude_sensor_name'].strip('\0')
         source = source + ' %s (%s),' % (name, what)
 
     source = source.strip(' ').strip(',')

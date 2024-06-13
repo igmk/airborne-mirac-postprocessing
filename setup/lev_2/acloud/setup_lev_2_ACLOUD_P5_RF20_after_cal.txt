@@ -1,0 +1,99 @@
+# Use # as comment sign.
+# Use ' to denote strings where ambiguous.
+
+# CAUTION: Do NOT use leading zeros!
+# (otherwise the number is interpreted as octal)
+#
+# For more verbose documentation, see lev02 setup file
+
+###################################################
+# AUTHOR                                          #
+###################################################
+# Author of the output data (i. e. YOU)
+author : 'Nils Risse'
+author_initials : 'NR'
+institution : 'Institute for Geophysics and Meteorology Cologne (Germany)'
+
+
+###################################################
+# INPUT                                           #
+###################################################
+path_base_in : /net/secaire/nrisse/radar_processing/acloud/mirac_radar
+lev_in : 'lev_1a'
+
+payload_sensor_name : 'mirac'
+
+
+###################################################
+# OUTPUT                                          #
+###################################################
+# output path base (subfolders are created automatically if needed)
+path_base_out : /net/secaire/nrisse/radar_processing/acloud/mirac_radar
+lev_out : 'lev_2'            # output level
+
+# netcdf-format of the output file
+# (see http://unidata.github.io/netcdf4-python/#section1)
+nc_format : NETCDF4
+
+nc_string_length : 1024
+
+
+###################################################
+# TIME                                            #
+###################################################
+# Do NOT use leading zeros!
+# Use a time interval that you know fulfills the optimization conditions (see
+# docstring of the script).
+
+# start (inclusive)
+year_beg : 2017
+month_beg : 6
+day_beg : 18
+hour_beg : 11
+minute_beg : 3
+second_beg : 30
+
+# end (exclusive)
+year_end : 2017
+month_end : 6
+day_end : 18
+hour_end : 18
+minute_end : 41
+second_end : 43
+
+
+###################################################
+# BEAM PROPERTIES                                 #
+###################################################
+# beam width
+beam_fwhm_deg : 1.026367
+
+###################################################
+# UNFOLDING                                       #
+###################################################
+# number of unfolding alternatives
+# 1: only the most likely one
+# 3: most likely plus the two adjacent folds
+# 5: ...
+unfold_number_of_alternatives : 3
+
+
+###################################################
+# AVERAGING OF (HORIZONTAL) WIND                  #
+###################################################
+# wind averaging parameters
+# (wind is used for decomposition of the target velocity)
+#
+# polynomial coefficients from lowest to highest order
+# (constant, linear, quadratic, cubic, ...) coefficients
+# E. g., if three coefficients are given, the tolerance is 
+#       tolerance = c[0] + c[1]*z + c[2]**2
+# z is the altitude
+wind_averaging_time :  0., 1.     # (s, s/m, s/m2,..) time tolerance
+wind_averaging_vertical : 20., 0.  # (m, m/m, m/m2,..) vert. dist. tol.
+wind_averaging_horizontal : 0., 5. # (m, m/m, m/m2,..) hor. dist. tol.
+
+wind_averaging_use_weights : 1      # (bool)
+                              #  0: no weighting
+                              #  1: weight points linearly by their spatio-temporal distance
+

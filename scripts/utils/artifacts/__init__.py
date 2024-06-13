@@ -1,3 +1,3 @@
 #!/usr/bin/python
 
-from correction import main as perform_corrections
+from utils.artifacts.correction import main as perform_corrections

@@ -1,0 +1,114 @@
+# Use # as comment sign.# Orientation of payload sensor's viewing direction relative to attitude sensor
+
+# Use ' to denote strings where ambiguous.
+
+# CAUTION: Do NOT use leading zeros!
+# (otherwise the number is interpreted as octal)
+
+###################################################
+# AUTHOR                                          #
+###################################################
+# Author of the output data (i. e. YOU)
+author : 'Nils Risse'
+author_initials : 'NR'
+institution : 'Institute for Geophysics and Meteorology Cologne (Germany)'
+
+
+###################################################
+# INPUT                                           #
+###################################################
+# path base of input files
+path_base_in : /net/secaire/nrisse/radar_processing/mosaic-aca/mirac_radar
+
+# input level
+lev_in : 'raw'
+
+# platform name
+# (this is only used when written as `platform_name` to the netcdf file)
+platform_name : 'Polar_5' 
+
+# sensor name
+payload_sensor_name : 'mirac'
+
+
+###################################################
+# OUTPUT                                          #
+###################################################
+# output path base (subfolders are created automatically if needed)
+path_base_out : /net/secaire/nrisse/radar_processing/mosaic-aca/mirac_radar
+
+# output level (may be chosen by the user)
+lev_out : 'lev_0'
+
+# netcdf-format of the output file
+# (see http://unidata.github.io/netcdf4-python/#section1)
+nc_format : NETCDF4
+
+# maximum length of character variables
+# (in practice, all strings will be padded with null-character to this length)
+nc_string_length : 1024
+
+
+###################################################
+# TIME                                            #
+###################################################
+# Do NOT use leading zeros!
+# Use a time interval that you know fulfills the optimization conditions (see
+# docstring of the script).
+
+# start (inclusive)
+year_beg : 2020
+month_beg :   9
+day_beg :     2
+hour_beg :    0
+minute_beg :  0
+second_beg :  0
+
+# end (exclusive)
+year_end : 2020
+month_end :   9
+day_end :    14
+hour_end :    0
+minute_end :  0
+second_end :  0
+
+
+###################################################
+# PARAMETERS                                      #
+###################################################
+# ========== SNR-filer  ================================== #
+# minimum SNR in linear (non-dB) space
+snr_filter_threshold : 1.       # originally: 3.1 (== sqrt(10))
+
+
+# ========== subsurface reflection filter  =========================== #
+# for local histograms (odd number)
+subsurface_reflection_filter_full_width_time : 7         # pixels
+
+# for local maxima (odd number)
+subsurface_reflection_filter_full_width_range : 5
+
+# minimum fraction of pixels with finite values to count as part of a cluster
+subsurface_reflection_filter_min_frac_finite : 0.1    # (inclusive)
+
+# location where sub-surface reflection is searched
+subsurface_reflection_filter_min_dist_to_surface : 9 # pixels (inclusive)
+subsurface_reflection_filter_max_dist_to_surface : 50  # pixels (exclusive)
+
+
+# ========== speckle filter  ================================= #
+speckle_filter_min_frac_finite : 0.417 #0.417
+
+# box dimensions (preferably odd numbers)
+speckle_filter_full_width_time : 3         # pixels
+speckle_filter_full_width_range : 13 #13       # pixels
+
+# range in which filter is used (percentage of range gates)
+percent_range_speckle_filter : 35. # %
+
+# if percentage exceed a specific amount set the maximum number for
+# filtering range gates
+
+max_filter_range_gates : 89 # This means: 'percent_range_speckle_filter' % of all 
+                            # range gates should be less than the amount of 
+                            # range gates 'max_filter_range_gates'  

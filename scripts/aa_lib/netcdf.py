@@ -20,7 +20,7 @@
 
 # standard modules
 import os
-from collections import Iterable
+from collections.abc import Iterable
 import warnings
 
 # PyPI modules

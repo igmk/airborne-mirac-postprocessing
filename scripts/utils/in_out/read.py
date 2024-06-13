@@ -18,7 +18,7 @@ import numpy as np
 from netCDF4 import Dataset
 
 # Acloud modules
-import init
+from utils.in_out import init
 
 # AA's library
 from aa_lib import datetime_utils
@@ -136,14 +136,15 @@ def get_data_raw(filename, setup, varnames=None):
 def load_variable(fid, key):
     """Load nc-variable and perform string-conversion if applicable."""
     vid = fid.variables[key]
-
+        
     # load
     value = vid[:]
 
     # convert string
     dimensions = vid.dimensions
-    if 'char_pos' in dimensions:
-        value = str(''.join(value)).strip('\0')
+    #if 'char_pos' in dimensions:
+        
+        #value = str(''.join(value)).strip('\0')
     return value
 
 def filter_time(data, setup):

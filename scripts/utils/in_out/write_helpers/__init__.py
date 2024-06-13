@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
-import create_dimensions
-import prepare_data
-import write_ancillary_data
-import write_dimension_variables
-import write_global_attributes
-import write_ins_data
-import write_platform_data
-import write_sensor_data
-import write_target_data
+from utils.in_out.write_helpers import create_dimensions
+from utils.in_out.write_helpers import prepare_data
+from utils.in_out.write_helpers import write_ancillary_data
+from utils.in_out.write_helpers import write_dimension_variables
+from utils.in_out.write_helpers import write_global_attributes
+from utils.in_out.write_helpers import write_ins_data
+from utils.in_out.write_helpers import write_platform_data
+from utils.in_out.write_helpers import write_sensor_data
+from utils.in_out.write_helpers import write_target_data

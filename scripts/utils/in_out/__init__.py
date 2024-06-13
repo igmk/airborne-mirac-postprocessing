@@ -1,10 +1,4 @@
-#!/usr/bin/python
-
-# files
-import paths
-import read
-import write
-
-# INS folder
-import ins
-#import dropsondes
+from utils.in_out import paths
+from utils.in_out import read
+from utils.in_out import write
+from utils.in_out import ins

@@ -1,0 +1,152 @@
+# This file was automatically created by step_1a_0_calibration.py on 2022-07-18 15:57:49.
+# Setup file for MIRAC calibration
+
+# Use # as comment sign.
+# Use ' to denote strings where ambiguous.
+
+# CAUTION: Do NOT use leading zeros!
+# (otherwise the number is interpreted as octal)
+#
+# How to
+# ======
+# For those parameters that you want to have calibrated, give THREE values, separated by commas:
+#
+# parameter_name : first_guess, uncertainty, tolerance  # optional comment
+# E. g.:
+# payload_sensor_azimuth_deg : 180.0, 5.0, 0.1      # this is the best I know
+#
+# which means that you know the value to be 180 +/- 5 and would like to
+# calibrate it with precision of 0.1
+
+###################################################
+# AUTHOR                                          #
+###################################################
+# Author of the output data (i. e. YOU)
+author : 'Nils Risse'
+author_initials : 'NR'
+institution : 'Institute for Geophysics and Meteorology Cologne (Germany)'
+
+
+###################################################
+# CALIBRATION                                     #
+###################################################
+calibrate_max_time : 3600    # (s) maximum time to spend on calibration
+calibrate_tol_cost_function : 0.1   # (m) tolerance of the cost function uncertainty upon convergence
+
+
+###################################################
+# INPUT                                           #
+###################################################
+# path base of input files
+path_base_in : /net/secaire/nrisse/radar_processing/halo-ac3/mirac_radar
+
+# path base of position and attitude sensors
+# (the program expects subfolders with the sensor name(s) therein)
+path_base_ins : /net/secaire/nrisse/radar_processing/halo-ac3/gps_ins
+
+# input level
+lev_in : lev_0
+
+# sensor names
+payload_sensor_name : mirac
+position_sensor_name : gps_ins
+attitude_sensor_name : gps_ins
+
+###################################################
+# OUTPUT LEVEL                                    #
+###################################################
+# The cost function depends on this:
+# 02 : the position of the surface peak is optimized
+# 03 : the position and width of the surface peak is optimized
+# 02_and_03 : the position and width of the surface peak is optimized
+lev_out : '1a'
+
+###################################################
+# TIME                                            #
+###################################################
+# Do NOT use leading zeros!
+# Use a time interval that you know fulfills the optimization conditions (see
+# docstring of the script).
+
+# start (inclusive)
+year_beg : 2022
+month_beg : 3
+day_beg : 22
+hour_beg : 13
+minute_beg : 30
+second_beg : 0
+
+# end (exclusive)
+year_end : 2022
+month_end : 3
+day_end : 22
+hour_end : 15
+minute_end : 10
+second_end : 0
+
+research_flight : 'RF03'
+campaign : 'HALO-AC3'
+
+###################################################
+# RELATIVE POSITIONS                              #
+###################################################
+# in aircraft coordinate system
+# x : along right wing
+# y : forward
+# z : upward
+# NOTE THAT THIS IS DIFFERENT TO THE COORDINATE SYSTEM DEFINED IN THE REPORT BY
+# TU DRESDEN!
+# Convert like this:
+#
+# Airframe   TU Dresden    
+#  x         y
+#  y         -x
+#  z         z
+
+# position of payload sensor
+# --------------------------
+# (a bit in front of point 3036: 3m forward, 0.4m downward, 0.1m right of the
+# center line)
+payload_sensor_x : -0.01                      # (m) direction towards right wing
+payload_sensor_y : -7.94                      # (m) direction towards aircraft nose
+payload_sensor_z : -0.46                      # (m) direction towards stabilizer
+
+# position of position sensor
+# ---------------------------
+# (GPS1, points 3125-3128 and 3212-3215)
+position_sensor_x : -0.005      # (m) direction towards right wing
+position_sensor_y : -7.698      # (m) direction towards aircraft nose
+position_sensor_z :  2.049      # (m) direction towards stabilizer
+
+
+###################################################
+# SENSOR ATTITUDE                                 #
+###################################################
+# Orientation of payload sensor's viewing direction relative to attitude sensor
+
+#                 0             90                 180          270
+#                 -----------------------------------------------------------
+# azimuth :       forward       twd right wing     backward     twd left wing
+# view angle :    downward      horizontal         upward       ---
+#
+payload_sensor_azimuth_deg : 177.0841724765575, 0.04661925920197518, 0.05      # (see definition above)
+payload_sensor_view_angle_deg : 25.701280812421448, 0.0038077211019533763, 0.05    # (see definition above)
+
+
+###################################################
+# TIME OFFSETS                                    #
+###################################################
+# real_time = record_time - time_offset
+# (positive offset: data are recorded too late)
+time_offset_payload_sensor : 0.                 # (s)
+time_offset_position_sensor : -0.015464301841325793, 0.019917645044609564, 0.05   # (s)
+time_offset_attitude_sensor : 1.6499587319614877, 0.014119844176014862, 0.05   # (s)
+
+
+###################################################
+# BEAM PROPERTIES                                 #
+###################################################
+# beam width
+beam_fwhm_deg : 1.1                                     # full width at half maximum
+
+

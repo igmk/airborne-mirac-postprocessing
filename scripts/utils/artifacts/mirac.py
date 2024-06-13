@@ -53,10 +53,10 @@ import datetime as dt
 import numpy as np
 
 # sub-modules
-import mirac_subsurface_reflection_filter as subsurface_reflection
-import mirac_snr_filter as snr
-import mirac_speckle_filter as speckle
-import mirac_defective_gate_filter as defective_gates
+from utils.artifacts import mirac_subsurface_reflection_filter as subsurface_reflection
+from utils.artifacts import mirac_snr_filter as snr
+from utils.artifacts import mirac_speckle_filter as speckle
+from utils.artifacts import mirac_defective_gate_filter as defective_gates
 
 _DEBUG = False
 
@@ -138,7 +138,7 @@ def check_date(data, setup):
     # ( (start1, end1), (start2, end2), ...)
     # start: inclusive, end: exclusive
     intervals = (
-            (dt.datetime(2017, 5, 23), dt.datetime(2020, 9, 15)),
+            (dt.datetime(2017, 5, 23), dt.datetime(2022, 4, 30)),
             # (another_start_time, another_end_time),
             )
 

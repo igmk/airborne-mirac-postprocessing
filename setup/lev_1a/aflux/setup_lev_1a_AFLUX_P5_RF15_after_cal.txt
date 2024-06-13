@@ -1,0 +1,144 @@
+# Use # as comment sign.
+# Use ' to denote strings where ambiguous.
+
+# CAUTION: Do NOT use leading zeros!
+# (otherwise the number is interpreted as octal)
+
+###################################################
+# AUTHOR                                          #
+###################################################
+# Author of the output data (i. e. YOU)
+author : 'Nils Risse'
+author_initials : 'NR'
+institution : 'Institute for Geophysics and Meteorology Cologne (Germany)'
+
+
+###################################################
+# INPUT                                           #
+###################################################
+# path base of input files
+path_base_in : /net/secaire/nrisse/radar_processing/aflux/mirac_radar
+
+# path base of position and attitude sensors
+# (the program expects subfolders with the sensor name(s) therein)
+path_base_ins : /net/secaire/nrisse/radar_processing/aflux/gps_ins
+
+# path base of dropsonde data
+path_base_dropsondes : /net/secaire/nrisse/radar_processing/aflux/dropsondes
+
+# input level
+lev_in : lev_0
+
+# sensor names
+payload_sensor_name : 'mirac'
+position_sensor_name : 'gps_ins'
+attitude_sensor_name : 'gps_ins'
+
+
+###################################################
+# OUTPUT                                          #
+###################################################
+# output path base (subfolders are created automatically if needed)
+path_base_out : /net/secaire/nrisse/radar_processing/aflux/mirac_radar
+
+# output level (may be chosen by the user)
+lev_out : lev_1a
+
+# netcdf-format of the output file
+# (see http://unidata.github.io/netcdf4-python/#section1)
+nc_format : NETCDF4
+
+# maximum length of character variables
+# (in practice, all strings will be padded with null-character to this length)
+nc_string_length : 1024
+
+
+###################################################
+# TIME                                            #
+###################################################
+# Do NOT use leading zeros!
+# Use a time interval that you know fulfills the optimization conditions (see
+# docstring of the script).
+
+# start (inclusive)
+year_beg : 2019
+month_beg : 4
+day_beg : 11
+hour_beg : 8
+minute_beg : 37
+second_beg : 45
+
+# end (exclusive)
+year_end : 2019
+month_end : 4
+day_end : 11
+hour_end : 16
+minute_end : 14
+second_end : 45
+
+research_flight : 'RF15'
+campaign : 'AFLUX'
+
+###################################################
+# RELATIVE POSITIONS                              #
+###################################################
+# in aircraft coordinate system
+# x : along right wing
+# y : forward
+# z : upward
+# NOTE THAT THIS IS DIFFERENT TO THE COORDINATE SYSTEM DEFINED IN THE REPORT BY
+# TU DRESDEN!
+# Convert like this:
+#
+# Airframe   TU Dresden    
+#  x         y
+#  y         -x
+#  z         z
+
+# position of payload sensor
+# --------------------------
+payload_sensor_x : -0.010 # 0.066   # (m) direction towards right wing
+payload_sensor_y : -7.940 # -6.830  # (m) direction towards aircraft nose
+payload_sensor_z : -0.460 # -0.528  # (m) direction towards stabilizer
+
+# position of position sensor
+# ---------------------------
+# (GPS1, points 3125-3128 and 3212-3215)
+position_sensor_x : -0.005      # (m) direction towards right wing
+position_sensor_y : -7.698      # (m) direction towards aircraft nose
+position_sensor_z :  2.049      # (m) direction towards stabilizer
+
+
+###################################################
+# SENSOR ATTITUDE                                 #
+###################################################
+# Orientation of payload sensor's viewing direction relative to attitude sensor
+
+#                 0             90                 180          270
+#                 -----------------------------------------------------------
+# azimuth :       forward       twd right wing     backward     twd left wing
+# view angle :    downward      horizontal         upward       ---
+
+payload_sensor_azimuth_deg : 175.372106
+payload_sensor_view_angle_deg : 25.912756
+
+###################################################
+# TIME OFFSETS                                    #
+###################################################
+# real_time = record_time - time_offset
+# (positive offset: data are recorded too late)
+time_offset_payload_sensor : 0.
+time_offset_position_sensor : 1.351025
+time_offset_attitude_sensor : 5.116871
+
+###################################################
+# EXTERNAL ANCILLARY DATA                         #
+###################################################
+# dropsondes farther away than this will not be taken into account
+time_tolerance_dropsonde : 3600.    # (s)
+
+# (Total) Number of neighbouring points (including the pivot itself) to compute
+# standard deviation of measured value. This is used as an error estimate. 
+num_vertical_neighbours_for_uncertainty_estimate : 5
+
+

@@ -8,7 +8,7 @@ import glob
 import re
 
 # Acloud modules
-import read
+from utils.in_out.mirac import read
 
 ###################################################
 # COMPULSORY FUNCTIONS                            #

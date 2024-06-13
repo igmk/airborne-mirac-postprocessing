@@ -19,7 +19,7 @@
 # standard modules
 import os
 import sys
-from collections import Iterable
+from collections.abc import Iterable
 import datetime as dt
 import inspect
 import textwrap

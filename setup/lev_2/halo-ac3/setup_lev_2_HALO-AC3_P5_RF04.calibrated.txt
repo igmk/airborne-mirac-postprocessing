@@ -1,0 +1,80 @@
+# This file was automatically created by step_2_0_calibration.py on 2022-07-18 16:34:48.
+# Use # as comment sign.
+# Use ' to denote strings where ambiguous.
+
+# CAUTION: Do NOT use leading zeros!
+# (otherwise the number is interpreted as octal)
+#
+# For more verbose documentation, see lev02 setup file
+
+###################################################
+# AUTHOR                                          #
+###################################################
+# Author of the output data (i. e. YOU)
+author : 'Nils Risse'
+author_initials : 'NR'
+institution : 'Institute for Geophysics and Meteorology Cologne (Germany)'
+
+
+###################################################
+# CALIBRATION                                     #
+###################################################
+calibrate_max_time : 3600    # (s) maximum time to spend on calibration
+calibrate_tol_cost_function : 0.001   # (m) tolerance of the cost function uncertainty upon convergence
+
+
+
+###################################################
+# INPUT                                           #
+###################################################
+path_base_in : /net/secaire/nrisse/radar_processing/halo-ac3/mirac_radar
+lev_in : 'lev_1a'
+
+payload_sensor_name : 'mirac'
+
+
+###################################################
+# OUTPUT                                          #
+###################################################
+lev_out : '2'            # output level
+
+
+###################################################
+# TIME                                            #
+###################################################
+# Do NOT use leading zeros!
+# Use a time interval that you know fulfills the optimization conditions (see
+# docstring of the script).
+
+# start (inclusive)
+year_beg : 2022
+month_beg : 3
+day_beg : 25
+hour_beg : 15
+minute_beg : 15
+second_beg : 0
+
+# end (exclusive)
+year_end : 2022
+month_end : 3
+day_end : 25
+hour_end : 15
+minute_end : 45
+second_end : 0
+
+
+###################################################
+# BEAM PROPERTIES                                 #
+###################################################
+# beam width
+beam_fwhm_deg : 1.1201171875, 0.0009765625, 0.001              # full width at half maximum
+
+
+###################################################
+# AVERAGING OF (HORIZONTAL) WIND                  #
+###################################################
+# domain over which horizontal wind is to be averaged
+# (wind is used for decomposition of the target velocity)
+wind_averaging_time : 1800          # (s) time tolerance
+wind_averaging_vertical : 20        # (m) vertical distance tolerance
+wind_averaging_horizontal : 10000    # (m) horizontal distance tolerance

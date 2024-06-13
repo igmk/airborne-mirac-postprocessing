@@ -284,10 +284,11 @@ def get_ins_data(date, setup):
     # load data
     get_one_ins = io.ins.read.get_data
     path_ins = setup['path_base_ins']
-    
+    research_flight = setup['research_flight']
+    campaign = setup['campaign']
     for ins_name in ins_names:
         data_ins[ins_name], meta_ins[ins_name] = get_one_ins(
-            ins_name, date, path_ins)
+            ins_name, date, research_flight, campaign, path_ins)
     
     # create interpolation functions
     for key in _ins_keys:

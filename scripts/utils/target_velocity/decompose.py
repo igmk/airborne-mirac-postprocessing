@@ -2,8 +2,8 @@
 """Decompose target velocity into x-, y-, z-components."""
 
 # Acloud modules
-import horizontal_motion
-import vertical_motion
+from utils.target_velocity import horizontal_motion
+from utils.target_velocity import vertical_motion
 
 def main(data, setup, idx_time=None, idx_range=None):
     """Decompose into x-, y-, z-components and return a dict.

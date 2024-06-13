@@ -1,3 +1,3 @@
 #!/usr/bin/python
 
-import read
+from utils.in_out.ins import read

@@ -13,7 +13,7 @@
 
 # standard modules
 import os
-import collections
+from collections.abc import Iterable
 from copy import deepcopy as copy
 
 # PyPI modules
@@ -418,7 +418,7 @@ def str2num(s, str_delims=_str_delims):
     """Convert to number if it does not contain ' or " ."""
     # list case
     if not isinstance(s, str):
-        if isinstance(s, collections.Iterable):
+        if isinstance(s, Iterable):
             return [str2num(el) for el in s]
 
     # check whether s is bounded with ' or "
@@ -475,7 +475,7 @@ def column_list(
     # ========== helper functions  ======================= #
     def expand(x, J):
         """Expand variable to length J if it is singleton."""
-        if isinstance(x, collections.Iterable):
+        if isinstance(x, Iterable):
             if len(x) == 1:
                 return x * J
             elif len(x) == J:
@@ -495,15 +495,15 @@ def column_list(
 
     # ========== perform checks  ========================= #
     # headers
-    assert isinstance(headers, collections.Iterable)
+    assert isinstance(headers, Iterable)
     J = len(headers)
 
     # data
-    assert isinstance(data, collections.Iterable)
+    assert isinstance(data, Iterable)
     assert len(data) == J
     init = False
     for x in data:
-        assert isinstance(x, collections.Iterable)
+        assert isinstance(x, Iterable)
         if not init:
             N = len(x)
             init = True

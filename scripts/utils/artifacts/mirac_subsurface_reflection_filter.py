@@ -298,7 +298,7 @@ def locate_mirrored_signal(Ze_column, Ze_section, data, setup):
     rlo = r_max + min_dist_surface
     rhi = r_max + max_dist_surface + 1
     if rhi > len(Ze_column):
-	rhi = len(Ze_column) + 1
+        rhi = len(Ze_column) + 1
 
     # position of reflection center
     interval = hist[rlo:rhi]
@@ -311,29 +311,31 @@ def locate_mirrored_signal(Ze_column, Ze_section, data, setup):
         first_zero = np.argmin(idx_zeros) # artifact needs to be separated from surface signal
         interval[0:idx_zeros[first_zero]+1] = 0
         r_refl_peak_rel = np.argmax(interval)
-	if r_refl_peak_rel > first_zero:
-        	r_refl_peak = rlo + r_refl_peak_rel
+        
+        if r_refl_peak_rel > first_zero:
+            r_refl_peak = rlo + r_refl_peak_rel
     
-        	# reflection signal upper bound
-        	upper_part = hist[r_refl_peak:rhi+1]
-        	r_refl_upper_bound_rel = np.argmin(upper_part)
-        	r_refl_upper_bound = r_refl_peak + r_refl_upper_bound_rel
-        	dist_hi = r_refl_upper_bound - r_max
-
-        	# reflection signal lower bound
-        	lower_part = hist[rlo:r_refl_peak+1]
-        	lower_part_inverse = lower_part[::-1]
-        	idx_inverse = np.argmin(lower_part_inverse)
-        	r_refl_lower_bound = r_refl_peak - idx_inverse
-        	dist_lo = r_refl_lower_bound - r_max
+            # reflection signal upper bound
+            upper_part = hist[r_refl_peak:rhi+1]
+            r_refl_upper_bound_rel = np.argmin(upper_part)
+            r_refl_upper_bound = r_refl_peak + r_refl_upper_bound_rel
+            dist_hi = r_refl_upper_bound - r_max
+    
+            # reflection signal lower bound
+            lower_part = hist[rlo:r_refl_peak+1]
+            lower_part_inverse = lower_part[::-1]
+            idx_inverse = np.argmin(lower_part_inverse)
+            r_refl_lower_bound = r_refl_peak - idx_inverse
+            dist_lo = r_refl_lower_bound - r_max
                
-
-        	# strongest reflection signal
-        	with warnings.catch_warnings():
-            	     warnings.simplefilter('ignore', RuntimeWarning)
-            	     Ze_refl = np.nanmax(Ze_section[:, r_refl_lower_bound:r_refl_upper_bound+1])
+            # strongest reflection signal
+            with warnings.catch_warnings():
+                warnings.simplefilter('ignore', RuntimeWarning)
+            Ze_refl = np.nanmax(Ze_section[:, r_refl_lower_bound:r_refl_upper_bound+1])
+            
         else:    
-                return r_max, 0, 0, np.nan
+             return r_max, 0, 0, np.nan
+         
     else:    
         return r_max, 0, 0, np.nan
 
