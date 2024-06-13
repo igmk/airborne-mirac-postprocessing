@@ -1,4 +1,6 @@
-# airborne-mirac-correction
+# Airborne radar post-processing
+Processing of the MiRAC measurements for attitude and viewing geometry
+[Andreas Anhaeuser (AA), 2018-06-28]
 
 Processing of the MiRAC measurements for attitude and viewing geometry. This
 prepares the MiRAC-A and soon also GRaWAC data.
